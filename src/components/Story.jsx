@@ -29,7 +29,7 @@ export default function Story() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
         <div>
           <Reveal className="flex items-center gap-3">
-            <LogoMark className="h-8 w-8 text-sea-bright" animated />
+            <LogoMark className="h-8 w-auto text-sea-bright" />
             <span className="text-[0.66rem] font-light tracking-[0.3em] text-sea-bright uppercase">
               Nosotras
             </span>

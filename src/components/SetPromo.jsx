@@ -24,7 +24,7 @@ export default function SetPromo() {
           />
 
           <div className="relative flex flex-col justify-center px-7 py-14 sm:px-12 lg:py-20">
-            <LogoMark className="h-9 w-9 text-sea-bright" animated />
+            <LogoMark className="h-9 w-auto text-sea-bright" />
 
             <p className="mt-6 text-[0.66rem] font-light tracking-[0.3em] text-sea-bright uppercase">
               Arma tu set

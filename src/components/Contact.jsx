@@ -8,6 +8,7 @@ import {
   EMAIL,
   INSTAGRAM,
   INSTAGRAM_HANDLE,
+  WHATSAPP_DISPLAY,
   WHATSAPP_NUMBER,
   WHATSAPP_URL,
 } from '../data/contact'
@@ -109,7 +110,7 @@ export default function Contact() {
               </span>
               <span>
                 <span className="block text-sm font-semibold text-navy">WhatsApp directo</span>
-                <span className="block text-sm text-navy-mist tabular">+57 300 123 4567</span>
+                <span className="block text-sm text-navy-mist tabular">{WHATSAPP_DISPLAY}</span>
               </span>
             </a>
 

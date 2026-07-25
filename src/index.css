@@ -49,7 +49,6 @@
   --animate-halo: halo 2.8s ease-out infinite;
   --animate-cue: cue 2s ease-in-out infinite;
   --animate-spin-slow: spin 14s linear infinite;
-  --animate-tide: tide 9s ease-in-out infinite;
   --animate-wave: wave 2.8s ease-in-out infinite;
 }
 
@@ -100,19 +99,6 @@
   }
   100% {
     transform: translate3d(3%, -4%, 0) scale(1.12);
-  }
-}
-
-/* Marea: las olas del logo suben y bajan muy despacio */
-@keyframes tide {
-  0%,
-  100% {
-    transform: translateX(0);
-    opacity: 0.75;
-  }
-  50% {
-    transform: translateX(4px);
-    opacity: 1;
   }
 }
 
@@ -266,6 +252,20 @@
 
 @utility surface-sea {
   background-image: linear-gradient(135deg, #a8e6e2 0%, #4cc4c8 45%, #0e7c86 100%);
+}
+
+/* El logo, pintado como máscara: la silueta viene del PNG (--logo-src) y el
+   color de `currentColor`, así el mismo archivo vale sobre azul y sobre crema. */
+@utility logo-mask {
+  background-color: currentColor;
+  mask-image: var(--logo-src);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: var(--logo-src);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 /* Textura de grano: quita el aspecto «plano» de los bloques de color */

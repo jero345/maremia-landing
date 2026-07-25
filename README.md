@@ -38,11 +38,41 @@ Los dos colores salen **del logo**, muestreados píxel a píxel del archivo orig
 | `--font-display` | Cormorant | Titulares, nombre de marca y cifras |
 | `--font-sans` | Montserrat | Cuerpo de texto e interfaz |
 
-El logo está **redibujado en SVG** ([src/components/LogoMark.jsx](src/components/LogoMark.jsx)):
-luna creciente sobre tres olas, en `currentColor`, así funciona en crema sobre azul y al revés.
-[src/components/Logo.jsx](src/components/Logo.jsx) lo compone con el nombre y el lema, en versión
-horizontal (`layout="row"`, la barra superior) o apilada (`layout="stack"`, como el original).
-El favicon es el mismo dibujo en [public/maremia.svg](public/maremia.svg).
+### El logo
+
+La luna y las olas son **el artwork original**, recortado del archivo del cliente a
+[src/assets/logo-mark.png](src/assets/logo-mark.png). No se usa como `img` sino como **máscara
+CSS**: el PNG solo aporta la silueta (su canal alfa) y el color lo pone `currentColor`. Por eso
+el mismo archivo sirve en crema sobre azul noche y en azul noche sobre crema, sin duplicar
+assets ni recolorear nada a mano.
+
+Lo monta [src/components/LogoMark.jsx](src/components/LogoMark.jsx); basta darle altura, el ancho
+sale solo de la proporción. [src/components/Logo.jsx](src/components/Logo.jsx) le añade el nombre
+y, con `tagline`, el lema.
+
+**El nombre y el lema van en texto, no en imagen.** En el logo original el lema mide 20 px sobre
+1080, así que a tamaño de barra o de pie quedaría en dos o tres píxeles, ilegible. En texto se
+lee siempre y lo anuncia un lector de pantalla.
+
+Los trazos de las olas se **engrosan ligeramente** en la marca pequeña: en el original miden 4 px
+sobre 640 y a 40 px de alto desaparecerían. El script que la genera está en la sección de abajo.
+
+Los iconos de la app ([public/icon-192.png](public/), 512 y 180) salen del logo real sobre el azul
+de la marca. [public/maremia.svg](public/maremia.svg) es la versión vectorial simplificada que usan
+las pestañas del navegador.
+
+### Regenerar la marca del logo
+
+El logo original del cliente está en [tools/logo-original.jpg](tools/logo-original.jpg). Si cambia,
+se regenera la máscara con:
+
+```powershell
+powershell -File tools\logo-mark.ps1
+```
+
+El script está comentado por dentro: recorta la zona de la luna y las olas, calcula el alfa como
+`(luminancia − azul) / (crema − azul)` y dilata los trazos de la banda de las olas. Si el logo
+nuevo tiene otro encuadre, hay que ajustar el recorte y la fila donde empiezan las olas.
 
 ---
 
@@ -111,14 +141,14 @@ difuminado inicial y espacio reservado para que no haya saltos de layout.
 
 ### Antes de publicar — datos de ejemplo por reemplazar
 
-1. **WhatsApp**: `WHATSAPP_NUMBER` en `src/data/contact.js` (hoy `573001234567`).
-2. **Correo y dirección del taller**: mismo archivo. El Instagram ya es el real (`@maremia_3`).
-3. **Precios**: todos los de `src/data/products.js` son inventados.
-4. **Nombres de las piezas**: «Palma de Agua», «Manglar», «Luna de Amatista»… son propuestas.
-5. **Conteo de piezas por categoría** (`count` en `shopCategories`).
-6. **Reseñas**: los nombres y textos de `Testimonials.jsx` son ficticios.
-7. **Cifras de la historia**: «6 años», «30+ piedras» en `Story.jsx`.
-8. **Boletín del pie**: hoy solo muestra un mensaje de confirmación; hay que conectarlo a un
+1. **Correo y ciudad del taller**: `src/data/contact.js`. El WhatsApp (`+57 310 462 6207`) y el
+   Instagram (`@maremia_3`) ya son los reales.
+2. **Precios**: todos los de `src/data/products.js` son inventados.
+3. **Nombres de las piezas**: «Palma de Agua», «Manglar», «Luna de Amatista»… son propuestas.
+4. **Conteo de piezas por categoría** (`count` en `shopCategories`).
+5. **Reseñas**: los nombres y textos de `Testimonials.jsx` son ficticios.
+6. **Cifras de la historia**: «6 años», «30+ piedras» en `Story.jsx`.
+7. **Boletín del pie**: hoy solo muestra un mensaje de confirmación; hay que conectarlo a un
    servicio real (Mailchimp, Brevo…) para que guarde los correos.
 
 ---

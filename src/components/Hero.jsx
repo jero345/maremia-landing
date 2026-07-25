@@ -39,7 +39,7 @@ export default function Hero() {
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:pb-24">
         <div className="max-w-2xl">
           <Reveal className="flex items-center gap-3">
-            <LogoMark className="h-8 w-8 text-cream/70" animated />
+            <LogoMark className="h-8 w-auto text-cream/70" />
             <span className="text-[0.68rem] font-light tracking-[0.3em] text-cream/75 uppercase">
               Colección Mi Mar
             </span>

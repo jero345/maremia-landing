@@ -1,5 +1,8 @@
-/* Datos de contacto de la marca. El WhatsApp sigue siendo de ejemplo. */
-export const WHATSAPP_NUMBER = '573001234567'
+/* Datos de contacto de la marca. */
+export const WHATSAPP_NUMBER = '573104626207'
+
+/** El mismo número, formateado para mostrarlo en pantalla. */
+export const WHATSAPP_DISPLAY = '+57 310 462 6207'
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   'Hola Maremía, quiero información sobre sus piezas.',
