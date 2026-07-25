@@ -1,0 +1,497 @@
+@import 'tailwindcss';
+
+/* =========================================================
+   MAREMÍA — Design tokens
+   Paleta tomada del logo: azul noche #1A2D3E sobre crema #EEEADE.
+   El turquesa y la arena vienen de las propias fotos del Caribe.
+   Contraste verificado AA.
+   Tipografía: Cormorant (display) / Montserrat (texto)
+   ========================================================= */
+@theme {
+  /* Los dos colores de la marca, tal cual salen del logo */
+  --color-navy: #1a2d3e;
+  --color-cream: #eeeade;
+
+  /* Escala del azul, derivada del anterior */
+  --color-navy-deep: #101d29; /* fondos aún más profundos */
+  --color-navy-soft: #24435c; /* tarjetas y bordes sobre azul */
+  --color-navy-mist: #46647d; /* texto secundario sobre claro (AA) */
+
+  /* Superficies claras */
+  --color-shell: #f7f5ef; /* crema más claro, fondo alterno */
+  --color-sand: #e2dbc9; /* arena, bloques suaves */
+  --color-line: #d5cfbf; /* bordes sobre claro */
+
+  /* Acento: el turquesa del mar en las fotos */
+  --color-sea: #0e7c86; /* accesible sobre crema (>=4.5:1) */
+  --color-sea-bright: #4cc4c8; /* uso sobre azul noche */
+  --color-sea-mist: #cbe8e6;
+
+  /* Semánticos */
+  --color-foreground: #1a2d3e;
+  --color-muted-foreground: #46647d;
+
+  /* Tipografía */
+  --font-display: 'Cormorant', ui-serif, Georgia, serif;
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+  /* Motion tokens — 150–300ms micro, 400–900ms fluido */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --animate-shimmer: shimmer 6s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 11s ease-in-out infinite;
+  --animate-marquee: marquee 34s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 40s linear infinite;
+  --animate-drift: drift 16s ease-in-out infinite alternate;
+  --animate-sparkle: sparkle 4.5s ease-in-out infinite;
+  --animate-halo: halo 2.8s ease-out infinite;
+  --animate-cue: cue 2s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+  --animate-tide: tide 9s ease-in-out infinite;
+  --animate-wave: wave 2.8s ease-in-out infinite;
+}
+
+/* =========================================================
+   Keyframes
+   ========================================================= */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Nubes de luz dorada que respiran detrás del contenido */
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(3%, -4%, 0) scale(1.12);
+  }
+}
+
+/* Marea: las olas del logo suben y bajan muy despacio */
+@keyframes tide {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateX(4px);
+    opacity: 1;
+  }
+}
+
+/* Oleaje mínimo para elementos pequeños (estrellas, viñetas) */
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Anillo que se expande bajo el botón flotante de WhatsApp */
+@keyframes halo {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.55;
+  }
+  70%,
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+@keyframes cue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(7px);
+    opacity: 1;
+  }
+}
+
+/* Entrada del visor de fotografía */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Destello que cruza una imagen al pasar el cursor */
+@keyframes sweep {
+  from {
+    translate: -135% 0;
+  }
+  to {
+    translate: 135% 0;
+  }
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+  }
+
+  /* Foco visible siempre — nunca se elimina el anillo */
+  :focus-visible {
+    outline: 2px solid var(--color-sea);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-sea-mist);
+    color: var(--color-navy);
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   Utilidades de marca
+   ========================================================= */
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Reflejo de agua sobre el texto — el acento de la marca */
+@utility text-sea-shimmer {
+  background-image: linear-gradient(
+    100deg,
+    #0e7c86 0%,
+    #4cc4c8 24%,
+    #a8e6e2 40%,
+    #4cc4c8 58%,
+    #0e7c86 80%,
+    #4cc4c8 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-shimmer);
+}
+
+@utility surface-sea {
+  background-image: linear-gradient(135deg, #a8e6e2 0%, #4cc4c8 45%, #0e7c86 100%);
+}
+
+/* Textura de grano: quita el aspecto «plano» de los bloques de color */
+@utility grain {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Desplazamiento suave ligado al scroll (lo alimenta useParallax) */
+@utility parallax {
+  translate: 0 var(--parallax, 0px);
+  will-change: translate;
+}
+
+/* Inclinación 3D siguiendo el puntero (la alimenta useTilt) */
+@utility tilt {
+  transform: perspective(1200px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 600ms var(--ease-out-soft);
+
+  &[data-tilting='true'] {
+    transition-duration: 120ms;
+  }
+}
+
+/* Brillo que sigue al puntero sobre una superficie inclinable */
+@utility glare {
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at var(--mx, 50%) var(--my, 50%),
+      rgba(255, 255, 255, 0.45),
+      transparent 58%
+    );
+    opacity: 0;
+    transition: opacity 450ms var(--ease-out-soft);
+  }
+
+  &[data-tilting='true']::after {
+    opacity: 1;
+  }
+}
+
+/* Destello diagonal sobre fotografías al pasar el cursor */
+@utility img-sheen {
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    translate: -135% 0;
+    background: linear-gradient(
+      115deg,
+      transparent 42%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 58%
+    );
+  }
+
+  &:hover::after,
+  &:focus-within::after {
+    animation: sweep 1.15s var(--ease-out-soft);
+  }
+}
+
+/* Barrido de luz sobre botones sólidos */
+@utility btn-sheen {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    translate: -140% 0;
+    background: linear-gradient(
+      105deg,
+      transparent 38%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 62%
+    );
+    transition: translate 900ms var(--ease-out-soft);
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    translate: 140% 0;
+  }
+}
+
+/* =========================================================
+   Aparición al hacer scroll
+   El estado lo controla useReveal con data-shown.
+   Usa `transform` a propósito: deja libres `translate`/`scale`
+   para las utilidades de hover de Tailwind v4.
+   ========================================================= */
+[data-reveal] {
+  opacity: 0;
+  transition:
+    opacity 750ms var(--ease-out-soft),
+    transform 750ms var(--ease-out-soft),
+    filter 750ms var(--ease-out-soft);
+  will-change: opacity, transform;
+}
+
+[data-reveal='up'] {
+  transform: translateY(34px);
+}
+
+[data-reveal='down'] {
+  transform: translateY(-26px);
+}
+
+[data-reveal='left'] {
+  transform: translateX(-44px);
+}
+
+[data-reveal='right'] {
+  transform: translateX(44px);
+}
+
+[data-reveal='scale'] {
+  transform: scale(0.93) translateY(22px);
+}
+
+[data-reveal='blur'] {
+  transform: translateY(20px);
+  filter: blur(14px);
+}
+
+/* Sube desde abajo con más recorrido: para fotografía a tamaño grande.
+   Ojo: aquí NO se puede usar `clip-path` para taparlo. Un elemento
+   recortado del todo tiene área pintada cero, así que el
+   IntersectionObserver que lo vigila nunca lo da por visible y la pieza
+   se queda escondida para siempre. */
+[data-reveal='rise'] {
+  transform: translateY(56px) scale(0.97);
+}
+
+/* Variante para titulares partidos en palabras: el contenedor no se atenúa */
+[data-reveal='mask'] {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal][data-shown='true'] {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  will-change: auto;
+}
+
+/* Regla turquesa que se dibuja sola al entrar el bloque */
+.rule-draw {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 800ms var(--ease-out-soft) 200ms;
+}
+
+[data-shown='true'] .rule-draw {
+  transform: scaleX(1);
+}
+
+/* Palabras que suben desde una máscara, una detrás de otra */
+.word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* Holgura para descendentes y para el vuelo de la cursiva: el margen negativo
+     la devuelve al flujo, así la máscara no altera el interlineado. */
+  padding: 0.06em 0.08em 0.14em;
+  margin: -0.06em -0.08em -0.14em;
+}
+
+.word-mask > span {
+  display: inline-block;
+  opacity: 0;
+  translate: 0 108%;
+  rotate: 1.5deg;
+  transition:
+    opacity 850ms var(--ease-out-soft),
+    translate 850ms var(--ease-out-soft),
+    rotate 850ms var(--ease-out-soft);
+}
+
+[data-shown='true'] .word-mask > span {
+  opacity: 1;
+  translate: none;
+  rotate: none;
+}
+
+/* =========================================================
+   Accesibilidad: movimiento reducido
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal],
+  .rule-draw,
+  .word-mask > span {
+    opacity: 1 !important;
+    transform: none !important;
+    translate: none !important;
+    rotate: none !important;
+    filter: none !important;
+  }
+}
