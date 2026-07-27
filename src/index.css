@@ -299,6 +299,11 @@
 
 /* Brillo que sigue al puntero sobre una superficie inclinable */
 @utility glare {
+  /* La utilidad crea su propio contexto: si el elemento no estuviera
+     posicionado, el brillo se anclaria al ancestro posicionado mas cercano
+     y se pintaria por encima de media pagina. */
+  position: relative;
+
   &::after {
     content: '';
     position: absolute;
@@ -321,6 +326,13 @@
 
 /* Destello diagonal sobre fotografías al pasar el cursor */
 @utility img-sheen {
+  /* `relative` y `overflow: hidden` son parte de la utilidad, no del sitio
+     donde se usa. Si se dejan fuera y alguien olvida ponerlos, el destello
+     se ancla al ancestro posicionado mas cercano y aparece como una franja
+     blanca diagonal cruzando la seccion entera. */
+  position: relative;
+  overflow: hidden;
+
   &::after {
     content: '';
     position: absolute;

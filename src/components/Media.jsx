@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 /**
  * Fotografía con carga progresiva: primero una miniatura difuminada incrustada
@@ -13,7 +13,19 @@ export default function Media({
   imgClassName = '',
   children,
 }) {
+  const imgRef = useRef(null)
   const [loaded, setLoaded] = useState(false)
+
+  /*
+   * `onLoad` no basta. Si la foto ya está en la caché del navegador —una
+   * segunda visita, o volver atrás— puede terminar de cargar ANTES de que
+   * React enganche el manejador. Ese evento no se vuelve a disparar, así que
+   * la imagen se quedaría en opacidad 0 para siempre y solo se vería el
+   * difuminado. Al montar comprobamos si ya venía completa.
+   */
+  useEffect(() => {
+    if (imgRef.current?.complete) setLoaded(true)
+  }, [])
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -27,6 +39,7 @@ export default function Media({
       />
 
       <img
+        ref={imgRef}
         src={photo.src}
         alt={photo.alt}
         width={photo.width}
@@ -36,6 +49,9 @@ export default function Media({
         fetchPriority={priority ? 'high' : 'auto'}
         decoding="async"
         onLoad={() => setLoaded(true)}
+        /* Si la foto falla, mostramos igual el hueco con su texto alternativo:
+           es mejor que dejar el difuminado puesto para siempre. */
+        onError={() => setLoaded(true)}
         className={`relative h-full w-full object-cover transition-[opacity,scale] duration-700 ease-out-soft ${
           loaded ? 'opacity-100' : 'opacity-0'
         } ${imgClassName}`}
