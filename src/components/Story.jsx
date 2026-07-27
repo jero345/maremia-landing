@@ -8,7 +8,7 @@ import { historiaCuarzo, historiaManojo } from '../data/photos'
 import { TAGLINE } from '../data/contact'
 
 const figures = [
-  { value: 6, suffix: '', label: 'años tejiendo' },
+  { value: 3, suffix: '', label: 'mujeres detrás' },
   { value: 30, suffix: '+', label: 'piedras distintas' },
   { value: 100, suffix: '%', label: 'hecho a mano' },
 ]
@@ -41,23 +41,24 @@ export default function Story() {
             step={52}
             className="mt-6 font-display text-4xl font-medium sm:text-5xl"
             segments={[
-              { text: 'Cada pieza lleva' },
+              { text: 'Tres mujeres,' },
               { br: true },
-              { text: 'la huella de' },
-              { text: 'quien la hizo', split: false, className: 'italic text-sea-bright' },
+              { text: 'una mesa' },
+              { text: 'llena de piedras', split: false, className: 'italic text-sea-bright' },
             ]}
           />
 
           <Reveal as="p" delay={420} className="mt-6 text-base leading-relaxed text-cream/80">
-            Maremía nació entre el mar y la luna, en un taller de Cartagena donde todavía se teje
-            nudo por nudo. No usamos moldes ni máquinas: escogemos la piedra, la enhebramos y la
-            rematamos a mano. Por eso dos collares nunca salen iguales, y por eso el tuyo va a
-            envejecer contigo.
+            Maremía nació en Medellín, entre tres mujeres y una mesa llena de piedras. Cada pieza
+            la desarrollamos y la armamos a mano, una por una: escogemos la piedra, la montamos y
+            la rematamos aquí mismo. No hay moldes ni máquinas, y por eso dos collares nunca
+            salen iguales.
           </Reveal>
 
           <Reveal as="p" delay={500} className="mt-4 text-base leading-relaxed text-cream/70">
-            Trabajamos con cuarzos tallados, ágatas, perlas de río y vidrio marino. Si tienes una
-            piedra con historia, la montamos en la pieza que quieras.
+            Trabajamos con cuarzos tallados, ágatas, perlas de río y dijes en rodio. Piezas para
+            la playa, sí, pero sobre todo para el resto del año: para la oficina, para el café de
+            la esquina, para el día que no tiene nada de especial.
           </Reveal>
 
           <Reveal delay={580} className="mt-10 grid grid-cols-3 gap-4">

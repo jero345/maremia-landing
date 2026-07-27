@@ -1,11 +1,8 @@
 import {
   catCapas,
-  catCharms,
   catCollares,
   catPulseras,
   catTobilleras,
-  catVerano,
-  charmsMano,
   collarAmatista,
   collarCaribe,
   collarFlor,
@@ -18,6 +15,9 @@ import {
 /*
  * PRECIOS DE EJEMPLO. Reemplazar por los reales antes de publicar.
  * `stones` alimenta los puntitos de color de cada tarjeta.
+ *
+ * Los dijes van montados en los collares: no se venden sueltos, así que no
+ * hay ni categoría ni producto de charms.
  */
 export const products = [
   {
@@ -35,7 +35,7 @@ export const products = [
     photo: collarManglar,
     name: 'Manglar',
     category: 'Collares',
-    detail: 'Perla barroca · dijes de jade',
+    detail: 'Perla barroca · dijes en rodio',
     stones: ['#2f4a3c', '#7f9a72', '#efe7d2'],
     price: 320000,
   },
@@ -88,26 +88,24 @@ export const products = [
     tag: 'Set de 3',
   },
   {
-    id: 'charms-sueltos',
-    photo: charmsMano,
-    name: 'Charms sueltos',
-    category: 'Charms',
-    detail: 'Cuarzo, ágata o concha · se monta al momento',
-    stones: ['#f6e3e6', '#6b4f8a', '#4cc4c8'],
-    price: 68000,
+    id: 'tobillera-orilla',
+    photo: catTobilleras,
+    name: 'Tobillera Orilla',
+    category: 'Tobilleras',
+    detail: 'Cuentas de piedra · cierre ajustable',
+    stones: ['#8a9a7b', '#c9a06a', '#4cc4c8'],
+    price: 118000,
   },
 ]
 
-export const categories = ['Todo', 'Collares', 'Pulseras', 'Charms']
+export const categories = ['Todo', 'Collares', 'Pulseras', 'Tobilleras']
 
-/* Los seis bloques de categoría, al estilo de una tienda */
+/* Los cuatro bloques de categoría, al estilo de una tienda */
 export const shopCategories = [
-  { id: 'collares', label: 'Collares', photo: catCollares, count: 24 },
-  { id: 'charms', label: 'Charms', photo: catCharms, count: 31 },
-  { id: 'pulseras', label: 'Pulseras', photo: catPulseras, count: 18 },
-  { id: 'tobilleras', label: 'Tobilleras', photo: catTobilleras, count: 12 },
-  { id: 'capas', label: 'Capas y sets', photo: catCapas, count: 9 },
-  { id: 'verano', label: 'Verano', photo: catVerano, count: 15 },
+  { id: 'collares', label: 'Collares', photo: catCollares },
+  { id: 'pulseras', label: 'Pulseras', photo: catPulseras },
+  { id: 'tobilleras', label: 'Tobilleras', photo: catTobilleras },
+  { id: 'capas', label: 'Capas y sets', photo: catCapas },
 ]
 
 export const formatCOP = (value) =>

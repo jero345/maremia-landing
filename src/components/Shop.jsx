@@ -26,7 +26,7 @@ export default function Shop() {
           <SectionHeading
             eyebrow="Lo más pedido"
             title="Las que nunca alcanzan"
-            description="Las piezas que más nos piden por Instagram. Se hacen por encargo, así que si ves una que te gusta, escríbenos y la armamos con las piedras que elijas."
+            description="Las piezas que más nos piden por Instagram. Si ves una que te gusta, escríbenos y te decimos qué hay disponible y en qué largos."
           />
 
           <Reveal

@@ -13,7 +13,7 @@ import {
   WHATSAPP_URL,
 } from '../data/contact'
 
-const interests = ['Collares', 'Pulseras', 'Tobilleras', 'Charms', 'Set de tres', 'Pieza a medida']
+const interests = ['Collares', 'Pulseras', 'Tobilleras', 'Set de tres', 'Regalo']
 
 const validators = {
   nombre: (v) => (v.trim().length < 2 ? 'Escribe tu nombre para saber cómo llamarte.' : ''),
@@ -258,7 +258,7 @@ export default function Contact() {
                   value={values.mensaje}
                   onChange={(e) => setField('mensaje', e.target.value)}
                   className="mt-2 w-full rounded-xl border border-line bg-shell px-4 py-3 text-base text-navy transition-[border-color,box-shadow,background-color] duration-300 ease-out-soft placeholder:text-navy-mist/60 focus:border-sea focus:bg-cream focus:shadow-[0_0_0_4px_rgba(76,196,200,0.18)]"
-                  placeholder="Quiero el Manglar pero con cuarzo rosa, y que llegue antes del 15."
+                  placeholder="Me gusta el Manglar. ¿Lo tienen disponible y en qué largos?"
                 />
               </div>
             </div>

@@ -1,27 +1,27 @@
-import { Gem, Hand, Package, RefreshCcw, Sparkles, Truck } from 'lucide-react'
+import { Gem, Hand, Package, RefreshCcw, Sun, Truck } from 'lucide-react'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
 const benefits = [
   {
     icon: Hand,
-    title: 'Tejido nudo por nudo',
-    text: 'Sin moldes ni producción en serie. Cada collar se arma a mano en el taller, uno detrás de otro.',
+    title: 'Armado pieza por pieza',
+    text: 'Sin moldes ni producción en serie. Cada collar lo desarrollamos y lo armamos a mano en el taller.',
   },
   {
     icon: Gem,
-    title: 'Piedra natural, no imitación',
-    text: 'Cuarzos tallados, ágatas, perlas de río y vidrio marino. Si la piedra tiene una veta, se queda.',
+    title: 'Piedra natural, nunca dos iguales',
+    text: 'Cuarzos tallados, ágatas, perlas de río y dijes en rodio. Elegimos las piedras de a una: tu pieza no va a ser igual a la de la foto ni a la de nadie.',
   },
   {
-    icon: Sparkles,
-    title: 'Ninguna se repite',
-    text: 'Elegimos las piedras de a una, así que tu pieza no va a ser igual a la de la foto ni a la de nadie.',
+    icon: Sun,
+    title: 'No solo para la playa',
+    text: 'Aguantan el agua salada, pero están pensadas para el resto del año: van igual de bien con jean que con vestido de baño.',
   },
   {
     icon: Truck,
     title: 'Envío gratis desde $ 250.000',
-    text: 'Despachamos desde Cartagena a toda Colombia en 24 a 72 horas, con guía para que la sigas.',
+    text: 'Despachamos desde Medellín a toda Colombia en 24 a 72 horas, con guía para que la sigas.',
   },
   {
     icon: RefreshCcw,

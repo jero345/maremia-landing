@@ -17,11 +17,11 @@ export default function Categories() {
         <SectionHeading
           eyebrow="Explora"
           title="Empieza por lo que buscas"
-          description="Seis familias, un mismo hilo: piedra natural, tejido a mano y el color del Caribe."
+          description="Piedra natural, armado a mano y el color del Caribe. Piezas que aguantan un día de playa y un lunes de oficina."
           align="center"
         />
 
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {shopCategories.map((category, index) => (
             <Reveal
               as="li"
@@ -49,13 +49,8 @@ export default function Categories() {
                 />
 
                 <span className="absolute inset-x-5 bottom-5 z-3 flex items-end justify-between gap-3">
-                  <span className="block">
-                    <span className="block font-display text-2xl font-medium text-cream">
-                      {category.label}
-                    </span>
-                    <span className="block text-[0.66rem] font-light tracking-[0.16em] text-cream/70 uppercase tabular">
-                      {category.count} piezas
-                    </span>
+                  <span className="block font-display text-2xl font-medium text-cream">
+                    {category.label}
                   </span>
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cream/40 text-cream transition-[background-color,scale,translate] duration-500 ease-spring group-hover:translate-x-0.5 group-hover:scale-110 group-hover:bg-cream group-hover:text-navy">
                     <ArrowRight className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />

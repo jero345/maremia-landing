@@ -12,14 +12,14 @@ const reviews = [
   },
   {
     quote:
-      'Pedí un charm de cuarzo rosa para el cumpleaños de mi hermana y me lo montaron en el collar que ya tenía. Llegó en cuatro días.',
+      'Lo compré pensando en las vacaciones y termino usándolo para ir a la oficina. Combina con todo y nadie tiene uno igual.',
     name: 'Daniela Restrepo',
-    role: 'Charms · Medellín',
+    role: 'Luna de Amatista · Medellín',
     initials: 'DR',
   },
   {
     quote:
-      'Lo mejor es que uno escribe por WhatsApp y le mandan fotos de las piedras antes de armarlo. Se siente como mandar a hacer algo tuyo.',
+      'Uno escribe por WhatsApp y le responden en el día, con fotos de lo que hay. Llegó en tres días y en una bolsita preciosa.',
     name: 'Marcela Pineda',
     role: 'Manglar · Cali',
     initials: 'MP',

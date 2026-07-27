@@ -3,13 +3,16 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Media from './Media'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
-import { charms } from '../data/photos'
+import { detalle } from '../data/photos'
 
 /**
- * Carrusel de charms con scroll horizontal nativo:
- * arrastra con el dedo en móvil, con los botones o el teclado en escritorio.
+ * Los dijes vistos de cerca, en un carrusel de scroll horizontal nativo:
+ * se arrastra con el dedo en móvil y con los botones o el teclado en escritorio.
+ *
+ * No es una categoría de tienda: los dijes van montados en los collares y no
+ * se venden sueltos. Esta sección enseña el detalle, no vende la pieza.
  */
-export default function Charms() {
+export default function Detalle() {
   const trackRef = useRef(null)
   const [atStart, setAtStart] = useState(true)
   const [atEnd, setAtEnd] = useState(false)
@@ -28,13 +31,13 @@ export default function Charms() {
   }
 
   return (
-    <section id="charms" className="scroll-mt-20 bg-sand py-20 lg:py-24">
+    <section id="detalle" className="scroll-mt-20 bg-sand py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="Charms"
-            title="Cámbialos según el día"
-            description="Cuarzo, ágata, concha o madreperla. Se enganchan y se quitan sin herramientas: un mismo collar, mil maneras de llevarlo."
+            eyebrow="De cerca"
+            title="Está en el detalle"
+            description="Cuarzo tallado, ágata, concha y madreperla. Cada collar viene con su dije ya montado: es lo que hace que ninguno se repita."
           />
 
           <Reveal delay={200} className="flex gap-2">
@@ -42,7 +45,7 @@ export default function Charms() {
               type="button"
               onClick={() => scrollBy(-1)}
               disabled={atStart}
-              aria-label="Ver los charms anteriores"
+              aria-label="Ver las fotos anteriores"
               className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-navy/20 text-navy transition-[background-color,border-color,opacity] duration-300 hover:border-navy hover:bg-navy hover:text-cream disabled:cursor-not-allowed disabled:opacity-35"
             >
               <ChevronLeft className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
@@ -51,7 +54,7 @@ export default function Charms() {
               type="button"
               onClick={() => scrollBy(1)}
               disabled={atEnd}
-              aria-label="Ver los charms siguientes"
+              aria-label="Ver las fotos siguientes"
               className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-navy/20 text-navy transition-[background-color,border-color,opacity] duration-300 hover:border-navy hover:bg-navy hover:text-cream disabled:cursor-not-allowed disabled:opacity-35"
             >
               <ChevronRight className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
@@ -64,17 +67,17 @@ export default function Charms() {
             ref={trackRef}
             onScroll={syncEdges}
             tabIndex={0}
-            aria-label="Carrusel de charms"
+            aria-label="Carrusel de detalles"
             className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 scrollbar-thin"
           >
-            {charms.map((charm) => (
+            {detalle.map((foto) => (
               <li
-                key={charm.key}
+                key={foto.key}
                 className="group w-[78%] shrink-0 snap-start sm:w-[46%] lg:w-[31%]"
               >
                 <figure className="img-sheen relative overflow-hidden rounded-2xl bg-shell">
                   <Media
-                    photo={charm}
+                    photo={foto}
                     sizes="(min-width: 1024px) 380px, (min-width: 640px) 46vw, 78vw"
                     className="aspect-4/5 w-full"
                     imgClassName="duration-[900ms] group-hover:scale-[1.06]"
@@ -84,11 +87,9 @@ export default function Charms() {
                     className="pointer-events-none absolute inset-0 bg-linear-to-t from-navy/75 via-transparent to-transparent"
                   />
                   <figcaption className="absolute inset-x-5 bottom-5 z-3">
-                    <p className="font-display text-2xl font-medium text-cream">
-                      {charm.caption}
-                    </p>
+                    <p className="font-display text-2xl font-medium text-cream">{foto.caption}</p>
                     <p className="text-[0.66rem] font-light tracking-[0.14em] text-cream/75 uppercase">
-                      {charm.note}
+                      {foto.note}
                     </p>
                   </figcaption>
                 </figure>

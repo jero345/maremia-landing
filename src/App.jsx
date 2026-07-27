@@ -6,7 +6,7 @@ import Marquee from './components/Marquee'
 import Shop from './components/Shop'
 import Story from './components/Story'
 import Categories from './components/Categories'
-import Charms from './components/Charms'
+import Detalle from './components/Detalle'
 import SetPromo from './components/SetPromo'
 import Lookbook from './components/Lookbook'
 import Benefits from './components/Benefits'
@@ -35,7 +35,7 @@ export default function App() {
         <Shop />
         <Story />
         <Categories />
-        <Charms />
+        <Detalle />
         <SetPromo />
         <Lookbook />
         <Benefits />

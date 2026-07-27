@@ -3,8 +3,8 @@ import { motionOk } from '../lib/motion'
 
 const messages = [
   'Envío gratis en Colombia desde $ 250.000',
-  'Piezas hechas a mano, una por una',
-  'Despachamos desde Cartagena en 24 h',
+  'Armadas a mano en Medellín, una por una',
+  'Para la playa y para todos los días',
 ]
 
 /* El aviso más largo fija el ancho, así la franja no salta al rotar. */

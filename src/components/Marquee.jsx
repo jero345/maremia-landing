@@ -1,10 +1,10 @@
 const claims = [
-  'Hecho a mano en Cartagena',
+  'Hecho a mano en Medellín',
   'Piedras naturales y cuarzos tallados',
   'Ninguna pieza se repite',
+  'Para la playa y para el lunes',
   'Envío gratis desde $ 250.000',
   'Cambios dentro de los 8 días',
-  'Empaque de regalo incluido',
 ]
 
 /**

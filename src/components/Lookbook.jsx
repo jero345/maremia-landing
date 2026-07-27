@@ -66,7 +66,7 @@ export default function Lookbook() {
         <SectionHeading
           eyebrow="Lookbook"
           title="Así se ven puestas"
-          description="Fotos del último viaje, sin retoque ni estudio: luz del Caribe, agua salada y piezas reales. Toca cualquiera para verla en grande."
+          description="Estas fotos son de un viaje, pero las piezas se quedan puestas el resto del año. Sin retoque ni estudio: luz real y piezas reales. Toca cualquiera para verla en grande."
           align="center"
         />
 

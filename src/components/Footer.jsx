@@ -10,7 +10,7 @@ const columns = [
     links: [
       { label: 'Lo más pedido', href: '#tienda' },
       { label: 'Categorías', href: '#categorias' },
-      { label: 'Charms', href: '#charms' },
+      { label: 'De cerca', href: '#detalle' },
       { label: 'Lookbook', href: '#lookbook' },
     ],
   },
@@ -28,7 +28,7 @@ const columns = [
 const conditions = [
   'Envío gratis en Colombia desde $ 250.000',
   'Cambios dentro de los primeros 8 días',
-  'Piezas hechas por encargo en 5 días',
+  'Despachamos en 24 a 72 horas',
   'Empaque de regalo incluido',
 ]
 
@@ -56,8 +56,8 @@ export default function Footer() {
           <div>
             <Logo tone="light" tagline />
             <p className="mt-6 max-w-xs text-sm leading-relaxed">
-              Joyería tejida a mano con piedras naturales, cuarzos tallados y perlas de río.
-              Hecha en Cartagena, pensada para el agua salada.
+              Joyería armada a mano con piedras naturales, cuarzos tallados y perlas de río.
+              Hecha en Medellín, para la playa y para todos los días.
             </p>
             <div className="mt-6 flex gap-3">
               {[

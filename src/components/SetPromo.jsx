@@ -33,12 +33,12 @@ export default function SetPromo() {
               Tres piezas, <span className="italic text-sea-bright">15 % menos</span>
             </h2>
             <p className="mt-5 max-w-md text-base text-cream/80">
-              Combina collar, pulsera y charm — de la colección que quieras. Nos escribes, elegimos
-              juntas las piedras y te lo mandamos en un solo empaque.
+              Combina collar, pulsera y tobillera — de la colección que quieras. Nos escribes,
+              miramos juntas qué hay disponible y te lo mandamos en un solo empaque.
             </p>
 
             <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-cream/70">
-              {['Sin mínimo de compra', 'Se combina con envío gratis', 'Listo en 5 días'].map(
+              {['Sin mínimo de compra', 'Se combina con envío gratis', 'Sale en 24 a 72 h'].map(
                 (item) => (
                   <li key={item} className="flex items-center gap-2">
                     <span

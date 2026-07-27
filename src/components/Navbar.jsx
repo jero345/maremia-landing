@@ -9,7 +9,7 @@ import { INSTAGRAM, WHATSAPP_URL } from '../data/contact'
 const links = [
   { href: '#tienda', label: 'Tienda' },
   { href: '#categorias', label: 'Categorías' },
-  { href: '#charms', label: 'Charms' },
+  { href: '#detalle', label: 'De cerca' },
   { href: '#lookbook', label: 'Lookbook' },
   { href: '#nosotras', label: 'Nosotras' },
   { href: '#contacto', label: 'Contacto' },

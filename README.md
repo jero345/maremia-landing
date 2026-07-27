@@ -1,11 +1,12 @@
 # Maremía — Landing page
 
-Landing page para **Maremía**, joyería tejida a mano con piedras naturales, cuarzos tallados y
-perlas de río. Hecha en Cartagena. *Mi mar · Mi luna · Mi alma.*
+Landing page para **Maremía**, joyería armada a mano con piedras naturales, cuarzos tallados y
+perlas de río. Hecha en Medellín por tres mujeres, para la playa y para todos los días.
+*Mi mar · Mi luna · Mi alma.*
 
 Construida con **React 19 + Vite + Tailwind CSS v4**. La estructura sigue el esquema de una
 tienda tipo [bamboleira.com](https://www.bamboleira.com/es): franja de avisos, hero de colección,
-parrilla de producto, historia de marca, bloques de categoría, carrusel de charms, promoción de
+parrilla de producto, historia de marca, bloques de categoría, carrusel de detalle, promoción de
 set, lookbook y pie con boletín.
 
 ---
@@ -118,7 +119,7 @@ miniatura de 20 px de cada foto en base64, que pinta al instante mientras baja e
    ```
 
 3. Describe la foto en `src/data/photos.js` y asígnala donde corresponda
-   (`products`, `shopCategories`, `lookbook`, `charms`…).
+   (`products`, `shopCategories`, `lookbook`, `detalle`…).
 
 [src/components/Media.jsx](src/components/Media.jsx) se encarga del resto: carga en diferido,
 difuminado inicial y espacio reservado para que no haya saltos de layout.
@@ -141,15 +142,25 @@ difuminado inicial y espacio reservado para que no haya saltos de layout.
 
 ### Antes de publicar — datos de ejemplo por reemplazar
 
-1. **Correo y ciudad del taller**: `src/data/contact.js`. El WhatsApp (`+57 310 462 6207`) y el
-   Instagram (`@maremia_3`) ya son los reales.
+1. **Correo**: `src/data/contact.js`. El WhatsApp (`+57 310 462 6207`), el Instagram
+   (`@maremia_3`) y la ciudad (Medellín) ya son los reales.
 2. **Precios**: todos los de `src/data/products.js` son inventados.
 3. **Nombres de las piezas**: «Palma de Agua», «Manglar», «Luna de Amatista»… son propuestas.
-4. **Conteo de piezas por categoría** (`count` en `shopCategories`).
-5. **Reseñas**: los nombres y textos de `Testimonials.jsx` son ficticios.
-6. **Cifras de la historia**: «6 años», «30+ piedras» en `Story.jsx`.
+4. **Reseñas**: los nombres y textos de `Testimonials.jsx` son ficticios.
+5. **Cifra de las piedras**: «30+ piedras distintas» en `Story.jsx` está a ojo. Las «3 mujeres»
+   sí las confirmó la marca.
+6. **Descuento del set**: el 15 % de `SetPromo.jsx` es una propuesta.
 7. **Boletín del pie**: hoy solo muestra un mensaje de confirmación; hay que conectarlo a un
    servicio real (Mailchimp, Brevo…) para que guarde los correos.
+
+### Lo que la marca **no** hace — no volver a escribirlo
+
+- **No se venden dijes sueltos.** Van montados en los collares. Por eso no hay ni categoría ni
+  producto de charms; la sección «De cerca» enseña el detalle, no lo vende.
+- **No se teje.** Las piezas se *arman* y se *desarrollan*. Evitar «tejido», «nudo por nudo».
+- **No hay servicio de «trae tu piedra y te la montamos»** ni pieza a medida.
+- **No son solo para la playa.** Nacieron mirando al mar, pero el mensaje es que se usan todo el
+  año: oficina, diario, ciudad.
 
 ---
 
@@ -162,8 +173,8 @@ difuminado inicial y espacio reservado para que no haya saltos de layout.
 4. **Banda de confianza** — marquesina con las garantías clave.
 5. **Tienda** — las 8 piezas más pedidas, con filtro por categoría y muestras de color.
 6. **Nosotras** — la historia de la marca sobre azul noche, con cifras que cuentan solas.
-7. **Categorías** — seis bloques con fotografía.
-8. **Charms** — carrusel horizontal.
+7. **Categorías** — cuatro bloques con fotografía.
+8. **De cerca** — carrusel con el detalle de los dijes (no se venden sueltos).
 9. **Arma tu set** — promoción de 3 piezas con 15 % de descuento.
 10. **Lookbook** — fotografía editorial con visor ampliado.
 11. **Comprar tranquila** — las seis garantías.

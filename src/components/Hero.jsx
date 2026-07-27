@@ -51,17 +51,17 @@ export default function Hero() {
             step={62}
             className="mt-6 font-display text-[2.6rem] font-medium leading-[1.05] sm:text-6xl lg:text-[4.6rem]"
             segments={[
-              { text: 'Lo que el mar' },
+              { text: 'Del mar,' },
               { br: true },
-              { text: 'te dejó en' },
-              { text: 'las manos', split: false, className: 'italic text-sea-bright' },
+              { text: 'para' },
+              { text: 'todos los días', split: false, className: 'italic text-sea-bright' },
             ]}
           />
 
           <Reveal as="p" delay={560} className="mt-6 max-w-xl text-base text-cream/80 sm:text-lg">
-            Collares, pulseras y charms tejidos a mano con piedras naturales, cuarzos tallados y
-            perlas de río. Cada pieza se arma una por una, así que ninguna se repite —
-            como las conchas que uno recoge en la orilla.
+            Collares, pulseras y tobilleras armados a mano en Medellín con piedras naturales,
+            cuarzos tallados y perlas de río. Nacieron mirando al mar, pero se quedan contigo el
+            resto del año: cada pieza se arma una por una, así que ninguna se repite.
           </Reveal>
 
           <Reveal delay={640} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">

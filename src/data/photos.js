@@ -28,9 +28,9 @@ export const collarPalma = photo(
 
 export const collarManglar = photo(
   'collar-manglar',
-  'Collar de cuentas oscuras con perla barroca y tres dijes verdes en forma de hoja',
+  'Collar de cuentas oscuras con perla barroca y tres dijes verdes en rodio',
   'Manglar',
-  'Perla barroca y dijes de jade',
+  'Perla barroca y dijes en rodio',
 )
 
 export const collarAmatista = photo(
@@ -68,23 +68,11 @@ export const pulserasArena = photo(
   'Se llevan de a tres o de a una',
 )
 
-export const charmsMano = photo(
-  'charms-mano',
-  'Varios dijes de cuarzo y piedras de colores sobre la palma de una mano',
-  'Charms sueltos',
-  'Elige el tuyo y lo montamos',
-)
-
 /* Categorías */
 export const catCollares = photo(
   'cat-collares',
   'Collar de cuentas naturales con dije de amatista sobre la piel',
   'Collares',
-)
-export const catCharms = photo(
-  'cat-charms',
-  'Colección de dijes de cuarzo y colores sobre una hoja de plátano',
-  'Charms',
 )
 export const catPulseras = photo(
   'cat-pulseras',
@@ -101,12 +89,6 @@ export const catCapas = photo(
   'Manojo de collares colgando frente al mar al atardecer',
   'Capas',
 )
-export const catVerano = photo(
-  'cat-verano',
-  'Sandalias, gafas de sol y collares sobre la cubierta de un barco',
-  'Verano',
-)
-
 /* Editorial y ambiente */
 export const heroModelo = photo(
   'hero-modelo',
@@ -138,7 +120,7 @@ export const lookbook = [
     'look-playa',
     'Mujer sonriendo en la playa con collares de cuentas y dije de cuarzo',
     'Sol de la tarde',
-    'Collar Caribe con charm de palmera',
+    'Collar Caribe con dije de palmera',
   ),
   photo(
     'look-mar',
@@ -166,29 +148,36 @@ export const lookbook = [
   ),
 ]
 
-export const charms = [
+/* Los dijes, de cerca. Van montados en los collares: no se venden sueltos. */
+export const detalle = [
   photo(
     'charm-palma',
-    'Dijes de cuarzo tallado sostenidos en una mano, entre ellos una palmera y un elefante',
+    'Detalle de los dijes de cuarzo tallado de un collar: una palmera y un elefante',
     'Palmera y elefante',
     'Cuarzo rosa · amatista',
   ),
   photo(
     'charm-hoja',
-    'Dijes de colores extendidos sobre una hoja de plátano en la playa',
-    'Todos los charms',
+    'Varios collares extendidos sobre una hoja de plátano, con sus dijes de colores',
+    'Colores de la colección',
     'Cuarzo · ágata · concha',
   ),
   photo(
+    'cat-charms',
+    'Collares con dijes de cuarzo rosa y piedras de colores sobre una hoja verde',
+    'Cuarzo rosa',
+    'Tallado uno por uno',
+  ),
+  photo(
     'charm-mesa',
-    'Detalle de la colección de dijes sobre una hoja verde',
+    'Detalle de los dijes de un collar sobre una hoja verde',
     'Cuarzo lechoso',
-    'Tallado a mano',
+    'Cada collar lleva el suyo',
   ),
   photo(
     'charms-mano',
-    'Varios dijes de cuarzo y piedras de colores sobre la palma de una mano',
-    'Elige el tuyo',
-    'Se monta en el momento',
+    'Collares recogidos en la palma de una mano, con sus dijes de piedra a la vista',
+    'En la mano',
+    'Piedra natural, nunca dos iguales',
   ),
 ]
