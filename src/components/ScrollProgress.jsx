@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { onScrollFrame } from '../lib/scroll'
 
-/** Hilo dorado en el borde superior que marca cuánto se ha leído de la página. */
+/** Hilo turquesa en el borde superior que marca cuánto se ha leído de la página. */
 export default function ScrollProgress() {
   const [progress, setProgress] = useState(0)
 

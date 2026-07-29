@@ -14,7 +14,7 @@ export default function SectionHeading({
   return (
     <div className={centered ? 'mx-auto max-w-2xl text-center' : 'max-w-2xl'}>
       <Reveal className={`flex items-center gap-3 ${centered ? 'justify-center' : ''}`}>
-        {/* La regla dorada se estira sola: marca el inicio de cada bloque */}
+        {/* La regla turquesa se estira sola: marca el inicio de cada bloque */}
         <span
           className={`rule-draw h-px w-8 ${isLight ? 'bg-sea-bright' : 'bg-sea'}`}
           aria-hidden="true"

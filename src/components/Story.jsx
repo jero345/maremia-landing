@@ -56,9 +56,9 @@ export default function Story() {
           </Reveal>
 
           <Reveal as="p" delay={500} className="mt-4 text-base leading-relaxed text-cream/70">
-            Trabajamos con cuarzos tallados, ágatas, perlas de río y dijes en rodio. Piezas para
-            la playa, sí, pero sobre todo para el resto del año: para la oficina, para el café de
-            la esquina, para el día que no tiene nada de especial.
+            Trabajamos con cuarzos tallados, ágatas y perlas de río, y todo lo metálico va en
+            rodio. Piezas para la playa, sí, pero sobre todo para el resto del año: para la
+            oficina, para el café de la esquina, para el día que no tiene nada de especial.
           </Reveal>
 
           <Reveal delay={580} className="mt-10 grid grid-cols-3 gap-4">

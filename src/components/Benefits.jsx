@@ -1,4 +1,4 @@
-import { Gem, Hand, Package, RefreshCcw, Sun, Truck } from 'lucide-react'
+import { Gem, Hand, MessageCircle, Package, RefreshCcw, Sparkles, Sun, Truck } from 'lucide-react'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
@@ -11,7 +11,12 @@ const benefits = [
   {
     icon: Gem,
     title: 'Piedra natural, nunca dos iguales',
-    text: 'Cuarzos tallados, ágatas, perlas de río y dijes en rodio. Elegimos las piedras de a una: tu pieza no va a ser igual a la de la foto ni a la de nadie.',
+    text: 'Cuarzos tallados, ágatas y perlas de río. Elegimos las piedras de a una: tu pieza no va a ser igual a la de la foto ni a la de nadie.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Todo lo metálico es rodio',
+    text: 'Dijes, cierres y terminales van en rodio. No se oscurece con el tiempo ni te deja la piel verde.',
   },
   {
     icon: Sun,
@@ -33,6 +38,11 @@ const benefits = [
     title: 'Llega lista para regalar',
     text: 'Bolsa de tela, tarjeta escrita a mano y la nota que quieras que lea quien la abra.',
   },
+  {
+    icon: MessageCircle,
+    title: 'Te respondemos el mismo día',
+    text: 'Escríbenos por WhatsApp y te mandamos fotos reales de lo que hay disponible antes de que decidas.',
+  },
 ]
 
 export default function Benefits() {
@@ -47,11 +57,11 @@ export default function Benefits() {
         <SectionHeading
           eyebrow="Comprar tranquila"
           title="Lo que va incluido siempre"
-          description="Seis cosas que no cambian, compres lo que compres."
+          description="Ocho cosas que no cambian, compres lo que compres."
           align="center"
         />
 
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit, index) => (
             <Reveal
               as="li"

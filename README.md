@@ -153,11 +153,16 @@ difuminado inicial y espacio reservado para que no haya saltos de layout.
 7. **Boletín del pie**: hoy solo muestra un mensaje de confirmación; hay que conectarlo a un
    servicio real (Mailchimp, Brevo…) para que guarde los correos.
 
-### Lo que la marca **no** hace — no volver a escribirlo
+### Reglas de la marca — confirmadas por la clienta
 
+Estas no son preferencias de redacción: son datos de producto. No volver a escribirlos al revés.
+
+- **Todo lo metálico es rodio.** Dijes, cierres y terminales. Nunca oro, plata, latón ni acero.
 - **No se venden dijes sueltos.** Van montados en los collares. Por eso no hay ni categoría ni
   producto de charms; la sección «De cerca» enseña el detalle, no lo vende.
+- **El taller está en Medellín.** No mencionar Cartagena en ningún sitio.
 - **No se teje.** Las piezas se *arman* y se *desarrollan*. Evitar «tejido», «nudo por nudo».
+- **No hay «familias creadoras».** La marca la llevan tres mujeres.
 - **No hay servicio de «trae tu piedra y te la montamos»** ni pieza a medida.
 - **No son solo para la playa.** Nacieron mirando al mar, pero el mensaje es que se usan todo el
   año: oficina, diario, ciudad.

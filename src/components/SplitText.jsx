@@ -5,7 +5,7 @@ import { useReveal } from '../hooks/useReveal'
  * Titular que entra palabra por palabra desde una máscara.
  *
  * `segments` es una lista de tramos: `{ text, className, split, br }`.
- * - `className` estiliza ese tramo (por ejemplo el degradado dorado).
+ * - `className` estiliza ese tramo (por ejemplo el degradado turquesa).
  * - `split: false` mantiene el tramo entero como una sola unidad — necesario
  *   cuando lleva un degradado recortado al texto, que se rompería por palabra.
  * - `br: true` inserta un salto de línea.
