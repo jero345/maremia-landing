@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X, MessageCircle } from 'lucide-react'
 import InstagramIcon from './icons/InstagramIcon'
-import Logo from './Logo'
 import { useActiveSection } from '../hooks/useActiveSection'
 import { onScrollFrame } from '../lib/scroll'
 import { INSTAGRAM, WHATSAPP_URL } from '../data/contact'
@@ -52,7 +51,7 @@ export default function Navbar() {
     >
       <div
         className={`mx-auto flex max-w-7xl items-center justify-between px-5 transition-[height] duration-500 ease-out-soft sm:px-8 ${
-          solid ? 'h-16' : 'h-20'
+          solid ? 'h-20' : 'h-26'
         }`}
       >
         <a
@@ -60,7 +59,13 @@ export default function Navbar() {
           className="inline-flex min-h-11 items-center rounded-sm transition-[opacity,scale] duration-300 ease-out-soft hover:scale-[1.02] hover:opacity-85"
           aria-label="Maremía, ir al inicio"
         >
-          <Logo tone={solid ? 'dark' : 'light'} />
+          <img
+            src={solid ? '/logo_nav2.png' : '/logo_nav1.png'}
+            alt="Maremía"
+            className={`w-auto object-contain transition-[height] duration-500 ease-out-soft ${
+              solid ? 'h-14 sm:h-15' : 'h-20 sm:h-23'
+            }`}
+          />
         </a>
 
         <nav aria-label="Principal" className="hidden lg:block">

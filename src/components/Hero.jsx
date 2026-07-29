@@ -1,5 +1,4 @@
 import { ArrowRight, ChevronDown } from 'lucide-react'
-import LogoMark from './LogoMark'
 import Media from './Media'
 import Reveal from './Reveal'
 import SplitText from './SplitText'
@@ -12,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative -mt-20 flex min-h-[92vh] items-end overflow-hidden bg-navy pt-20 text-cream"
+      className="relative -mt-26 flex min-h-[92vh] items-end overflow-hidden bg-navy pt-26 text-cream"
     >
       {/* Fotografía de portada, ligeramente más lenta que el scroll */}
       {/* Sobresale por arriba y por abajo para que el parallax nunca deje bordes */}
@@ -38,13 +37,6 @@ export default function Hero() {
 
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:pb-24">
         <div className="max-w-2xl">
-          <Reveal className="flex items-center gap-3">
-            <LogoMark className="h-8 w-auto text-cream/70" />
-            <span className="text-[0.68rem] font-light tracking-[0.3em] text-cream/75 uppercase">
-              Colección Mi Mar
-            </span>
-          </Reveal>
-
           <SplitText
             as="h1"
             delay={120}

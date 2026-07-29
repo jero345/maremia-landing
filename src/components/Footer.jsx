@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight, CheckCircle2, Mail, MessageCircle } from 'lucide-react'
 import InstagramIcon from './icons/InstagramIcon'
-import Logo from './Logo'
 import { EMAIL, INSTAGRAM, INSTAGRAM_HANDLE, WHATSAPP_URL } from '../data/contact'
 
 const columns = [
@@ -45,7 +44,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="grain relative overflow-hidden bg-navy pt-16 pb-10 text-cream/75">
+    <footer className="grain relative overflow-hidden bg-navy pt-20 pb-10 text-cream/75">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-32 left-1/2 h-104 w-104 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(76,196,200,0.14),transparent_70%)] animate-drift"
@@ -54,7 +53,11 @@ export default function Footer() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 border-b border-cream/15 pb-12 lg:grid-cols-[1.5fr_1fr_1fr_1.4fr]">
           <div>
-            <Logo tone="light" tagline />
+            <img
+              src="/logo_nav1.png"
+              alt="Maremía"
+              className="h-24 w-auto object-contain sm:h-32"
+            />
             <p className="mt-6 max-w-xs text-sm leading-relaxed">
               Joyería armada a mano con piedras naturales, cuarzos tallados y perlas de río.
               Hecha en Medellín, para la playa y para todos los días.
