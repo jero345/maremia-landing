@@ -37,7 +37,7 @@ export default function Detalle() {
           <SectionHeading
             eyebrow="De cerca"
             title="Está en el detalle"
-            description="Cuarzo tallado, ágata, concha y madreperla. Cada collar viene con su dije ya montado: es lo que hace que ninguno se repita."
+            description="Palmeras y peces tallados a mano en piedra semipreciosa. Cada collar viene con su dije ya montado: es lo que hace que ninguno se repita."
           />
 
           <Reveal delay={200} className="flex gap-2">

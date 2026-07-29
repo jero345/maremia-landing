@@ -1,6 +1,6 @@
 const claims = [
   'Hecho a mano en Medellín',
-  'Piedras naturales y cuarzos tallados',
+  'Piedras semipreciosas y perlas de río',
   'Ninguna pieza se repite',
   'Para la playa y para el lunes',
   'Envío gratis desde $ 250.000',

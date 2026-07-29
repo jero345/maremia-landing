@@ -59,7 +59,7 @@ export default function Footer() {
               className="h-24 w-auto object-contain sm:h-32"
             />
             <p className="mt-6 max-w-xs text-sm leading-relaxed">
-              Joyería armada a mano con piedras naturales, cuarzos tallados y perlas de río.
+              Joyería armada a mano con piedras semipreciosas y perlas de río.
               Hecha en Medellín, para la playa y para todos los días.
             </p>
             <div className="mt-6 flex gap-3">

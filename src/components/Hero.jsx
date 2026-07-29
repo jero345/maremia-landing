@@ -51,9 +51,9 @@ export default function Hero() {
           />
 
           <Reveal as="p" delay={560} className="mt-6 max-w-xl text-base text-cream/80 sm:text-lg">
-            Collares, pulseras y tobilleras armados a mano en Medellín con piedras naturales,
-            cuarzos tallados y perlas de río. Nacieron mirando al mar, pero se quedan contigo el
-            resto del año: cada pieza se arma una por una, así que ninguna se repite.
+            Collares, pulseras y tobilleras armados a mano en Medellín con piedras semipreciosas y
+            perlas de río. Nacieron mirando al mar, pero se quedan contigo el resto del año: cada
+            pieza se arma una por una, así que ninguna se repite.
           </Reveal>
 
           <Reveal delay={640} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">

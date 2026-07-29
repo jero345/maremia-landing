@@ -10,13 +10,13 @@ const benefits = [
   },
   {
     icon: Gem,
-    title: 'Piedra natural, nunca dos iguales',
-    text: 'Cuarzos tallados, ágatas y perlas de río. Elegimos las piedras de a una: tu pieza no va a ser igual a la de la foto ni a la de nadie.',
+    title: 'Piedra semipreciosa, nunca dos iguales',
+    text: 'Piedras semipreciosas y perlas de río. Las elegimos de a una: tu pieza no va a ser igual a la de la foto ni a la de nadie.',
   },
   {
     icon: Sparkles,
-    title: 'Todo lo metálico es rodio',
-    text: 'Dijes, cierres y terminales van en rodio. No se oscurece con el tiempo ni te deja la piel verde.',
+    title: 'Baños en oro de 18K y rodio',
+    text: 'Todo lo metálico —dijes, cierres y terminales— va bañado en oro de 18K o en rodio. No se oscurece ni te deja la piel verde.',
   },
   {
     icon: Sun,

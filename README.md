@@ -157,7 +157,11 @@ difuminado inicial y espacio reservado para que no haya saltos de layout.
 
 Estas no son preferencias de redacción: son datos de producto. No volver a escribirlos al revés.
 
-- **Todo lo metálico es rodio.** Dijes, cierres y terminales. Nunca oro, plata, latón ni acero.
+- **Los metales llevan baño de oro de 18K o de rodio.** Dijes, cierres y terminales. Nunca latón,
+  acero ni «plata».
+- **Las piedras se llaman «semipreciosas».** No nombrar cuarzo, amatista ni ágata: la clienta
+  prefiere el término genérico. Las perlas de río sí se pueden nombrar.
+- **Los dijes solo tienen dos formas: palmera y pez.** No hay elefantes ni otras figuras.
 - **No se venden dijes sueltos.** Van montados en los collares. Por eso no hay ni categoría ni
   producto de charms; la sección «De cerca» enseña el detalle, no lo vende.
 - **El taller está en Medellín.** No mencionar Cartagena en ningún sitio.

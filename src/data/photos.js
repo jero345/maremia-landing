@@ -21,23 +21,23 @@ function photo(key, alt, caption, note) {
 /* Producto */
 export const collarPalma = photo(
   'collar-palma',
-  'Collar de cuentas turquesa con dije de cuarzo tallado en forma de palmera, sobre la cubierta de un barco',
+  'Collar de cuentas turquesa con dije de piedra semipreciosa tallado en forma de palmera, sobre la cubierta de un barco',
   'Palma de Agua',
-  'Cuarzo tallado y cuentas de vidrio marino',
+  'Dije de palmera tallado a mano',
 )
 
 export const collarManglar = photo(
   'collar-manglar',
-  'Collar de cuentas oscuras con perla barroca y tres dijes verdes en rodio',
+  'Collar de cuentas oscuras con perla barroca y tres dijes verdes',
   'Manglar',
-  'Perla barroca y dijes en rodio',
+  'Perla barroca y dijes con baño de rodio',
 )
 
 export const collarAmatista = photo(
   'collar-amatista',
-  'Collares superpuestos con perlas de río y un dije de amatista tallado en forma de elefante',
-  'Luna de Amatista',
-  'Amatista tallada a mano',
+  'Dos collares superpuestos: uno con dije de pez y otro con dije de palmera en piedra semipreciosa',
+  'Luna de Río',
+  'Dijes de palmera y de pez',
 )
 
 export const collarCaribe = photo(
@@ -49,9 +49,9 @@ export const collarCaribe = photo(
 
 export const collarFlor = photo(
   'collar-flor',
-  'Collares superpuestos en rosa y turquesa con dije de cuarzo rosa',
+  'Collares superpuestos en rosa y turquesa con dije de palmera en piedra semipreciosa',
   'Flor de Coral',
-  'Cuarzo rosa y ágata',
+  'Piedras semipreciosas en rosa',
 )
 
 export const collarManglarPlano = photo(
@@ -63,7 +63,7 @@ export const collarManglarPlano = photo(
 
 export const pulserasArena = photo(
   'pulseras-arena',
-  'Pulseras de piedras naturales sobre una mano abierta encima del agua turquesa',
+  'Pulseras de piedras semipreciosas sobre una mano abierta encima del agua turquesa',
   'Pulseras Arena',
   'Se llevan de a tres o de a una',
 )
@@ -71,7 +71,7 @@ export const pulserasArena = photo(
 /* Categorías */
 export const catCollares = photo(
   'cat-collares',
-  'Collar de cuentas naturales con dije de amatista sobre la piel',
+  'Collar de cuentas de piedra semipreciosa con dije de palmera sobre la piel',
   'Collares',
 )
 export const catPulseras = photo(
@@ -92,7 +92,7 @@ export const catCapas = photo(
 /* Editorial y ambiente */
 export const heroModelo = photo(
   'hero-modelo',
-  'Mujer en la playa con tres collares Maremía superpuestos y un dije de cuarzo rosa',
+  'Mujer en la playa con tres collares Maremía superpuestos y un dije de palmera',
   'Colección Mi Mar',
   'Tres capas, una sola historia',
 )
@@ -105,11 +105,17 @@ export const historiaManojo = photo(
 
 export const historiaCuarzo = photo(
   'historia-cuarzo',
-  'Collar de cuentas turquesa con dije de cuarzo colgando del pasamanos de un barco',
-  'Cuarzo blanco sobre agua',
+  'Collar de cuentas turquesa con dije de palmera colgando del pasamanos de un barco',
+  'Piedra clara sobre agua',
 )
 
 export const lookbook = [
+  photo(
+    'look-piscina',
+    'Retrato de mujer con un collar de cuentas turquesa y una perla al centro, junto al agua',
+    'Turquesa y perla',
+    'Collar corto, para llevar a diario',
+  ),
   photo(
     'look-perfil',
     'Retrato de perfil en la playa con collares superpuestos en rosa y turquesa',
@@ -118,7 +124,7 @@ export const lookbook = [
   ),
   photo(
     'look-playa',
-    'Mujer sonriendo en la playa con collares de cuentas y dije de cuarzo',
+    'Mujer sonriendo en la playa con collares de cuentas y dije de palmera',
     'Sol de la tarde',
     'Collar Caribe con dije de palmera',
   ),
@@ -140,44 +146,41 @@ export const lookbook = [
     'Día de barco',
     'Todo lo que cabe en un bolso',
   ),
-  photo(
-    'collar-manglar-plano',
-    'Collar Manglar extendido sobre la cubierta de madera de un barco frente al mar',
-    'Sobre cubierta',
-    'Collar Manglar',
-  ),
 ]
 
-/* Los dijes, de cerca. Van montados en los collares: no se venden sueltos. */
+/*
+ * Los dijes, de cerca. Van montados en los collares: no se venden sueltos.
+ * Solo hay dos formas: palmera y pez. No inventar otras.
+ */
 export const detalle = [
   photo(
     'charm-palma',
-    'Detalle de los dijes de cuarzo tallado de un collar: una palmera y un elefante',
-    'Palmera y elefante',
-    'Cuarzo rosa · amatista',
+    'Detalle de los dijes de un collar: dos palmeras talladas en piedra semipreciosa y un pez',
+    'Palmeras y pez',
+    'Talladas a mano, una por una',
   ),
   photo(
     'charm-hoja',
     'Varios collares extendidos sobre una hoja de plátano, con sus dijes de colores',
     'Colores de la colección',
-    'Cuarzo · ágata · concha',
+    'Piedras semipreciosas',
   ),
   photo(
     'cat-charms',
-    'Collares con dijes de cuarzo rosa y piedras de colores sobre una hoja verde',
-    'Cuarzo rosa',
+    'Collares con dijes de palmera y piedras de colores sobre una hoja verde',
+    'Palmeras en rosa',
     'Tallado uno por uno',
   ),
   photo(
     'charm-mesa',
     'Detalle de los dijes de un collar sobre una hoja verde',
-    'Cuarzo lechoso',
+    'Piedra clara',
     'Cada collar lleva el suyo',
   ),
   photo(
     'charms-mano',
     'Collares recogidos en la palma de una mano, con sus dijes de piedra a la vista',
     'En la mano',
-    'Piedra natural, nunca dos iguales',
+    'Piedra semipreciosa, nunca dos iguales',
   ),
 ]

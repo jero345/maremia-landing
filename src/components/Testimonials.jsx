@@ -14,7 +14,7 @@ const reviews = [
     quote:
       'Lo compré pensando en las vacaciones y termino usándolo para ir a la oficina. Combina con todo y nadie tiene uno igual.',
     name: 'Daniela Restrepo',
-    role: 'Luna de Amatista · Medellín',
+    role: 'Luna de Río · Medellín',
     initials: 'DR',
   },
   {
